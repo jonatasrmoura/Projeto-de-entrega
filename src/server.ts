@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use(routes);
 
-// Tratamento de exeções
+// Middleware - Tratamento de exeções
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
   if (err instanceof Error) {
     return response.status(400).json({
